@@ -1,6 +1,17 @@
-import values from 'lodash/object/values';
+'use strict';
 
-export const KEY = {
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.KEYS = exports.KEY = undefined;
+
+var _values = require('lodash/object/values');
+
+var _values2 = _interopRequireDefault(_values);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var KEY = exports.KEY = {
 	UP: 38,
 	DOWN: 40,
 	ESC: 27,
@@ -10,4 +21,4 @@ export const KEY = {
 	K: 75
 };
 
-export const KEYS = values(KEY);
+var KEYS = exports.KEYS = (0, _values2.default)(KEY);
