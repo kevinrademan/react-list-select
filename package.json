@@ -7,10 +7,14 @@
   ],
   "main": "dist/index.js",
   "files": [
-    "src/index.js",
-    "src/keys.js",
-    "src/List.js",
-    "src/ListItem.js",
+    "dist/index.js",
+    "dist/keys.js",
+    "dist/List.js",
+    "dist/ListItem.js",
+    "src/index.es6",
+    "src/keys.es6",
+    "src/List.es6",
+    "src/ListItem.es6",
     "example/index.css",
     "example/index.es6",
     "example/index.html",
@@ -52,8 +56,7 @@
     "watch": "watchify -v $npm_package_config_browserify -e example/index.es6 -o example/bundle.js",
     "browser-sync": "browser-sync start --files='example/*.js, example/*css, example/*.html}' --server=example/",
     "deploy": "gh-pages-deploy",
-    "post-deploy": "npm run clean",
-    "postinstall": "npm run clean; npm run build"
+    "post-deploy": "npm run clean"
   },
   "gh-pages-deploy": {
     "staticpath": "example",
