@@ -1,17 +1,17 @@
 {
   "name": "react-list-select",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "List with selectable and navigable items",
   "keywords": [
     "react-component"
   ],
-  "main": "index.js",
-  "style": "index.css",
+  "main": "dist/index.js",
+  "style": "dist/index.css",
   "files": [
-    "index.js",
-    "keys.js",
-    "List.js",
-    "ListItem.js",
+    "dist/index.js",
+    "dist/keys.js",
+    "dist/List.js",
+    "dist/ListItem.js",
     "README.md",
     "CHANGELOG.md"
   ],
@@ -22,6 +22,8 @@
   "license": "ISC",
   "repository": "hawkrives/react-list-select",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babelify": "^5.0.3",
     "browser-sync": "^2.2.1",
     "browserify": "^9.0.3",
@@ -38,9 +40,9 @@
     "browserify": "--debug -t [babelify] -e index.es6 --extension=.es6"
   },
   "scripts": {
-    "clean": "rm -f *.js example/*.js",
+    "clean": "rm -rf dist example/*.js",
     "make-example": "browserify $npm_package_config_browserify -e example/index.es6 > example/bundle.js",
-    "build": "babel ./*.es6 --out-dir ./",
+    "build": "babel src --out-dir dist",
     "start": "npm run browser-sync & npm run watch; wait",
     "prepublish": "npm run build",
     "postpublish": "npm run clean",
