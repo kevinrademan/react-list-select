@@ -6,18 +6,21 @@
     "react-component"
   ],
   "main": "dist/index.js",
-  "style": "dist/index.css",
   "files": [
-    "dist/index.js",
-    "dist/keys.js",
-    "dist/List.js",
-    "dist/ListItem.js",
+    "src/index.js",
+    "src/keys.js",
+    "src/List.js",
+    "src/ListItem.js",
+    "example/index.css",
+    "example/index.es6",
+    "example/index.html",
     "README.md",
     "CHANGELOG.md"
   ],
   "author": "Navaru",
   "contributors": [
-    "Hawken Rives <hawkrives@gmail.com>"
+    "Hawken Rives <hawkrives@gmail.com>",
+    "Kevin Rademan <kevin@versa.co.za>"
   ],
   "license": "ISC",
   "repository": "hawkrives/react-list-select",
@@ -49,7 +52,8 @@
     "watch": "watchify -v $npm_package_config_browserify -e example/index.es6 -o example/bundle.js",
     "browser-sync": "browser-sync start --files='example/*.js, example/*css, example/*.html}' --server=example/",
     "deploy": "gh-pages-deploy",
-    "post-deploy": "npm run clean"
+    "post-deploy": "npm run clean",
+    "postinstall": "npm run clean; npm run build"
   },
   "gh-pages-deploy": {
     "staticpath": "example",
